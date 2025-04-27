@@ -1,5 +1,4 @@
 import axios from "axios";
-
 /*creating axios instances  */
 
 const api=axios.create({

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import api from './api/PostApi.jsx';
+import api from './api/Postapi';
 
 function App() {
   useEffect( ()=>{
