@@ -1,10 +1,21 @@
 import { useEffect, useState } from 'react';
 import api from './api/Postapi';
+import GetPost from './components/GetPost';
 
 function App() {
-return(
-  <>
-  
+return( //bg-linear-to-r from-cyan-500 to-blue-500
+  <>  
+  <div className='max-w-[1440px]  mx-auto h-auto '>  
+    <div className="  mx-auto ">
+    <ul className=' flex flex-wrap gap-[40px] py-[5px] hover:cursor-pointer mobile:justify-center pr-[0px] md:pr-[50px]  text-[#000] sm:justify-end font-medium text-[18px] text-center bg-[#213448]'>
+    <li className='order-0 border-[1px] border-[black] bg-[white] rounded-[2px]  hover:underline w-[60px] md:w-[80px]'>Home</li>
+    <li className='order-1 border-[1px] border-[black] bg-[white] rounded-[2px] hover:underline w-[60px] md:w-[80px]'>About</li>
+    <li className='order-2 border-[1px] border-[black] bg-[white] rounded-[2px] hover:underline w-[60px] md:w-[80px]'>More</li>
+    </ul>
+    </div>
+    <div className=" m-[4px] bg-white  mt-[20px] rounded-[3px]">
+    <div className="grid md:grid-cols-2 mobile:grid-cols-2 lg:grid-cols-3  mx-auto"><GetPost/></div> </div>
+  </div>
   </>
 )
 }

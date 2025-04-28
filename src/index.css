@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme{
+
+    --breakpoint-mobile:18.125rem;
+    --breakpoint-led:87.5rem;
+    --breakpoint-mobile89:5.6525rem;
+}
+@theme{
+    --color-c1:#6062FF;
+    --color-c2:#FFFFFF;
+}
