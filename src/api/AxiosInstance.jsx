@@ -6,7 +6,7 @@ headers:{
          'X-Custom-Header':'foobar',
          "Content-Type":"applicatio/json",
         },
-timeout:2000,
+timeout:8000,
 });
 
 export default api;

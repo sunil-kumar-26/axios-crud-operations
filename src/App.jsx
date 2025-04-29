@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import api from './api/Postapi';
+import api from './api/AxiosInstance.jsx';
 import GetPost from './components/GetPost';
 
 function App() {
