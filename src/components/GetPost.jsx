@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DeleteApi from './DeleteApi.jsx';
 import api from "../api/AxiosInstance.jsx";
+import PostApi from "./PostApi.jsx";
 function GetPost(){
   const[body,setBody]=useState([])
     const getAPI= async (api)=>{
@@ -35,6 +36,11 @@ useEffect(()=>{
 
     return(
         <>
+        
+           <div className="bg-purple-200  text-center my-[20px] p-[50px] pl-[20px] ">
+           <PostApi body={body} setBody={setBody}/>
+           </div>
+
         {body.map((item,idx)=>{
           return(
         <div key={idx} className="mx-auto bg-[#E5E5E5] rounded-[10px] m-[10px]  ">
