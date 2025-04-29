@@ -20,7 +20,9 @@ useEffect(()=>{
 },[]);
     if(!body.length){
     return(
-      <h4>Loading...</h4>  
+      <>  
+      {/*<h4>Loading...</h4>   */}
+      </>
     )
     }
   

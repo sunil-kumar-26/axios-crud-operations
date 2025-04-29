@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "../api/AxiosInstance";
-import GetPost from "./GetPost";
+// import GetPost from "./GetPost";
 
 function PostApi({body,setBody}){
    const[addData,setAddData]=useState({

@@ -1,7 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState,lazy,Suspense } from 'react';
 import api from './api/AxiosInstance.jsx';
-import GetPost from './components/GetPost';
+// import GetPost from './components/GetPost';
 import PostApi from './components/PostApi.jsx';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+const GetPost=lazy(()=>import('./components/GetPost'));
+
 function App() {
 return( //bg-linear-to-r from-cyan-500 to-blue-500
   <>  
@@ -14,9 +18,11 @@ return( //bg-linear-to-r from-cyan-500 to-blue-500
     <li className='order-2 border-[1px] border-[black] bg-[white] rounded-[2px] hover:underline w-[60px] md:w-[80px]'>More</li>
     </ul>
     </div>
-    <div className=" m-[4px] bg-white  mt-[20px] rounded-[3px]">
+    <div className=" m-[4px] bg-white  mt-[0px] rounded-[3px]">
     <div className="grid md:grid-cols-2 mobile:grid-cols-2 lg:grid-cols-3  mx-auto">
-    <GetPost/>
+      <Suspense fallback={<Skeleton count={1} duration={0.5} width={1740} height={'100vh'} baseColor='#444' highlightColor='#202020'/>}>
+      <GetPost/>
+    </Suspense>
     </div>
     </div>
 
